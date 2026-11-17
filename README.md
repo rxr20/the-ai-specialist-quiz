@@ -14,9 +14,9 @@
 ![jQuery](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=white)
 ![Offline](https://img.shields.io/badge/runs-100%25_offline-2ea44f)
 ![Questions](https://img.shields.io/badge/questions-1%2C320-5ce9ff)
-![Live demo](https://img.shields.io/badge/live_demo-coming_soon-orange)
+[![Live demo](https://img.shields.io/badge/live_demo-play_now-2ea44f)](https://rxr20.github.io/the-ai-specialist-quiz/)
 
-[**▶️ Play online**](#play-online) · [**🎯 About**](#what-is-it) · [**✨ Features**](#features) · [**🕹️ How to play**](#how-to-play) · [**🚀 Run locally**](#run-it-locally) · [**🙏 Credits**](#credits)
+[**▶️ Play online**](https://rxr20.github.io/the-ai-specialist-quiz/) · [**🎯 About**](#what-is-it) · [**✨ Features**](#features) · [**🕹️ How to play**](#how-to-play) · [**🚀 Run locally**](#run-it-locally) · [**🙏 Credits**](#credits)
 
 </div>
 
@@ -29,14 +29,14 @@ TASQ is a browser quiz for people learning or brushing up on **AI and machine-le
 ## ▶️ Play online
 
 <div align="center">
-<img src="images/banneronlinedemo.jpg" alt="TASQ online demo available – try it now" width="100%">
+<a href="https://rxr20.github.io/the-ai-specialist-quiz/"><img src="images/banneronlinedemo.jpg" alt="TASQ online demo available – try it now" width="100%"></a>
 </div>
 
-You don't have to download anything to try TASQ. A hosted demo will let you play straight from your browser, on desktop or phone.
+You don't have to download anything to try TASQ. The hosted demo lets you play straight from your browser, on desktop or phone.
 
 | | |
 |---|---|
-| 🌐 **Live demo** | `TBD` – link coming soon |
+| 🌐 **Live demo** | **[https://rxr20.github.io/the-ai-specialist-quiz/](https://rxr20.github.io/the-ai-specialist-quiz/)** |
 | 💻 **Prefer offline?** | See [Run it locally](#run-it-locally) |
 
 <div align="center">
@@ -107,8 +107,8 @@ No coding or installation needed. Pick whichever way is easiest:
 **Option 2 – Clone with Git** (if you already use it)
 
 ```bash
-git clone https://github.com/rxr20/TASQ.git
-cd TASQ
+git clone https://github.com/rxr20/the-ai-specialist-quiz.git
+cd the-ai-specialist-quiz
 ```
 
 Then open `index.html` in a modern browser.
