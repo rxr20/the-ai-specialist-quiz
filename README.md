@@ -99,10 +99,13 @@ Because it's a single static page, it also opens in a phone browser, with a simp
 
 No coding or installation needed. Pick whichever way is easiest:
 
-**Option 1 – Download as ZIP (easiest)**
-1. Click the green **Code** button at the top of this repo, then **Download ZIP**.
-2. Unzip the folder anywhere on your computer.
-3. Open `index.html` in your browser.
+**Option 1 – Download the latest release (easiest)**
+1. Open the **[latest release](https://github.com/rxr20/the-ai-specialist-quiz/releases/latest)** (currently [v1.0.0](https://github.com/rxr20/the-ai-specialist-quiz/releases/tag/v1.0.0); all versions are on the [Releases page](https://github.com/rxr20/the-ai-specialist-quiz/releases)).
+2. Under **Assets**, download the **ZIP** (`Source code (zip)`).
+3. Unzip the folder anywhere on your computer.
+4. Open `index.html` in your browser.
+
+> Prefer the newest unreleased changes? Click the green **Code** button at the top of this repo, then **Download ZIP**.
 
 **Option 2 – Clone with Git** (if you already use it)
 
