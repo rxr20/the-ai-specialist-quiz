@@ -97,13 +97,23 @@ Because it's a single static page, it also opens in a phone browser, with a simp
 
 ## 🚀 Run it locally
 
+No coding or installation needed. Pick whichever way is easiest:
+
+**Option 1 – Download as ZIP (easiest)**
+1. Click the green **Code** button at the top of this repo, then **Download ZIP**.
+2. Unzip the folder anywhere on your computer.
+3. Open `index.html` in your browser.
+
+**Option 2 – Clone with Git** (if you already use it)
+
 ```bash
 git clone https://github.com/rxr20/TASQ.git
 cd TASQ
-# then just open index.html in a modern browser
 ```
 
-No install needed: double-click `index.html`. Press **Enter** (or tap) on the splash screen, then choose **PLAY**.
+Then open `index.html` in a modern browser.
+
+Once it's open, press **Enter** (or tap) on the splash screen, then choose **PLAY**.
 
 <a id="how-to-play"></a>
 
