@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TASQ27 · The AI Specialist Quiz 2027</title>
+  <link rel="stylesheet" href="core/libs/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="core/main.css">
+</head>
+<body>
+  <div id="universe"></div>
+  <div id="veil" class="veil" aria-hidden="true"></div>
+  <div class="aurora"></div><div class="scanlines"></div><div class="vignette"></div>
+  <div class="flash" id="flash"></div>
+
+  <!-- Splash -->
+  <section id="splash" class="screen">
+    <div class="splash-inner">
+      <div class="intro-symbol">
+        <div class="orbit"></div>
+        <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <g stroke="#5ce9ff" stroke-width=".7" opacity=".75">
+            <ellipse cx="50" cy="50" rx="38" ry="14" transform="rotate(58 50 50)"/>
+            <ellipse cx="50" cy="50" rx="38" ry="14" transform="rotate(-58 50 50)"/>
+            <ellipse cx="50" cy="50" rx="38" ry="14"/>
+            <path d="M50 12 L50 88 M12 50 L88 50 M24 24 L76 76 M76 24 L24 76" opacity=".5"/>
+          </g>
+          <g fill="#ffcf82"><circle cx="50" cy="12" r="2"/><circle cx="83" cy="69" r="2"/><circle cx="19" cy="61" r="1.7"/></g>
+          <circle cx="50" cy="50" r="8" fill="#5ce9ff" fill-opacity=".12" stroke="#5ce9ff"/>
+          <circle cx="50" cy="50" r="2.3" fill="#fff"/>
+        </svg>
+      </div>
+      <p class="pre-title">The AI Specialist Quiz 2027</p>
+      <h1 class="splash-title">TASQ<span>27</span></h1>
+      <p class="press">PRESS ENTER OR TAP TO CONTINUE</p>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="screen hidden">
+    <div class="overlay-content menu-inner">
+      <p class="pre-title">The AI Specialist Quiz 2027</p>
+      <h2 class="menu-title">TASQ<em>27</em></h2>
+      <p id="menu-player" class="menu-player"></p>
+      <nav class="menu-buttons">
+        <button class="menu-btn primary" data-go="play">PLAY</button>
+        <button class="menu-btn" data-go="record">RECORD</button>
+        <button class="menu-btn" data-go="settings">SETTINGS</button>
+      </nav>
+      <p id="menu-note" class="menu-note"></p>
+    </div>
+  </section>
+
+  <!-- Presenter: hologram host, shown on the game and result screens -->
+  <aside id="presenter" class="presenter" hidden aria-live="polite">
+    <div class="presenter-avatar" aria-hidden="true">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M22 22c0-7 4-11 10-11s10 4 10 11c-3-3-6-4-10-4s-7 1-10 4z" fill="currentColor" fill-opacity=".35"/>
+        <circle cx="32" cy="25" r="9"/>
+        <path d="M14 58c2-11 9-16 18-16s16 5 18 16"/>
+        <path d="M6 30h52M6 38h52M6 46h52" opacity=".35"/>
+      </svg>
+      <span class="holo-lines"></span>
+    </div>
+    <div class="presenter-body">
+      <p class="presenter-name">The TASQ Presenter</p>
+      <p id="presenter-line" class="presenter-line"></p>
+    </div>
+  </aside>
+
+  <!-- Test -->
+  <section id="game" class="screen hidden">
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div><div class="brand-name">TASQ27</div><div class="brand-sub">THE AI SPECIALIST QUIZ 2027</div></div>
+        </div>
+        <div class="top-stats">
+          <div class="stat"><span>QUESTION</span><b id="progress">01 / 50</b></div>
+          <div class="stat"><span>TIME LEFT</span><b id="overall">30:00</b></div>
+          <div class="stat"><span>SCORE</span><b id="score">000000</b></div>
+        </div>
+      </header>
+
+      <main>
+        <div class="game-body">
+          <aside class="ladder-wrap" aria-label="Question ladder">
+            <ol id="ladder" class="ladder"></ol>
+          </aside>
+
+          <div class="stage">
+          <div class="eyebrow">
+            <div class="eyebrow-left"><span class="cross">✳</span> <span>Knowledge assessment</span> <span class="sep">/</span> <span id="debug-tag" class="debug-tag" hidden>DEBUG · 1 QUESTION</span></div>
+            <div class="lives" id="lives" aria-label="Lives"></div>
+          </div>
+
+          <div class="track"><div id="progressBar" class="fill"></div></div>
+
+          <div class="card question-card">
+            <h2 id="question"></h2>
+          </div>
+
+          <div id="answers" class="options"></div>
+
+          <div class="controls">
+            <button id="pow-fifty" class="life-btn">50 : 50</button>
+            <button id="pow-phone" class="life-btn">PHONE A FRIEND</button>
+            <button id="pow-crowd" class="life-btn">ASK THE CROWD</button>
+            <button id="lock" class="lock-btn" hidden>FINAL ANSWER ↗</button>
+          </div>
+
+          <div class="bottom-row">
+            <div class="timer-wrap">
+              <div class="timer-number"><span id="time">00.0</span><small>SECONDS</small></div>
+              <div class="timer-track"><div class="timer-fill" id="timerfill"></div></div>
+              <span class="timer-label" id="qlimit">/ 120 S</span>
+            </div>
+            <div class="action-message" id="action-message">SELECT YOUR ANSWER</div>
+            <button class="action-button" id="action" hidden>NEXT QUESTION ↗</button>
+          </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <span>NOĒSIS LABS <span class="sep">/</span> TASQ27</span>
+        <div class="footer-right"><span><kbd>A</kbd> <kbd>B</kbd> <kbd>C</kbd> <kbd>D</kbd> SELECT</span><span><kbd>ENTER</kbd> FINAL ANSWER</span><span>50 Q · 30 MIN · 25–120 S EACH</span></div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Result -->
+  <section id="result" class="screen hidden">
+    <div class="overlay-content result-inner">
+      <p id="result-kicker" class="pre-title">Test complete</p>
+      <h2 id="result-title">CONGRATULATIONS</h2>
+      <p id="result-copy" class="result-copy"></p>
+      <div class="result-score" id="final-score">000000</div>
+      <p id="record-banner" class="record-banner" hidden>NEW PERSONAL RECORD</p>
+      <div class="intro-stats">
+        <div class="intro-stat"><strong id="stat-correct">0/0</strong><span>CORRECT</span></div>
+        <div class="intro-stat"><strong id="stat-accuracy">0%</strong><span>ACCURACY</span></div>
+        <div class="intro-stat"><strong id="stat-time">00:00</strong><span>TIME USED</span></div>
+        <div class="intro-stat"><strong id="stat-mistakes">0</strong><span>MISTAKES</span></div>
+      </div>
+      <p id="previous-best" class="previous-best"></p>
+      <div class="actions center">
+        <button id="play-again" class="primary-button">PLAY AGAIN</button>
+        <button id="to-menu" class="ghost-button">MENU</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Records -->
+  <section id="record" class="screen hidden">
+    <div class="overlay-content page-inner">
+      <p class="pre-title">Records in this browser</p>
+      <h2>RECORD</h2>
+      <p id="best-line" class="best-line"></p>
+      <div class="table-wrap">
+        <table class="records">
+          <thead><tr><th>Date</th><th>Name</th><th>Result</th><th>Score</th><th>Correct</th><th>Time</th></tr></thead>
+          <tbody id="record-rows"></tbody>
+        </table>
+      </div>
+      <div class="actions center"><button class="ghost-button" data-go="menu">BACK</button></div>
+    </div>
+  </section>
+
+  <!-- Settings -->
+  <section id="settings" class="screen hidden">
+    <div class="overlay-content page-inner">
+      <p class="pre-title">Preferences</p>
+      <h2>SETTINGS</h2>
+      <form class="form" onsubmit="return false">
+        <label class="field">Player name
+          <input id="set-name" maxlength="20" autocomplete="off">
+        </label>
+        <label class="check"><input id="set-sound" type="checkbox"> Sound effects</label>
+      </form>
+      <p id="set-status" class="status"></p>
+      <div class="actions center">
+        <button id="reset-records" class="ghost-button">CLEAR RECORDS</button>
+        <button class="ghost-button" data-go="menu">BACK</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lifeline popups -->
+  <div id="popup" class="popup" hidden>
+    <div class="popup-card">
+      <p id="popup-kicker" class="pre-title"></p>
+      <h3 id="popup-title"></h3>
+      <div id="popup-body" class="popup-body"></div>
+      <button id="popup-close" class="primary-button" hidden>CONTINUE</button>
+    </div>
+  </div>
+
+  <script src="core/libs/jquery/jquery-3.7.1.min.js"></script>
+  <script src="core/libs/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="core/libs/threejs/three.min.js"></script>
+  <script src="core/quiz-bank.js"></script>
+  <script src="core/main.js"></script>
+</body>
+</html>
