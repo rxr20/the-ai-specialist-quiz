@@ -3,9 +3,9 @@
 
   const $ = (id) => document.getElementById(id);
   const QUESTIONS_PER_TEST = 50;
-  const TEST_MS = 30 * 60 * 1000;   // overall countdown
-  const FIRST_LIMIT = 120;          // seconds for the first round of questions
-  const LAST_LIMIT = 25;            // seconds for the last round
+  const TEST_MS = 50 * 60 * 1000;   // overall countdown
+  const FIRST_LIMIT = 200;          // seconds for the first round of questions
+  const LAST_LIMIT = 42;            // seconds for the last round
   const ROUNDS = 10;                // ladder rungs, each rung shares one time limit
   const PASS_PERCENT = 70;
   const DEFAULT_SETTINGS = { name: 'Player', sound: true };
@@ -149,7 +149,7 @@
     const settings = loadSettings();
     $('menu-player').textContent = 'Player: ' + settings.name;
     $('menu-note').textContent = state.bank.length + ' questions in the bank  ·  '
-      + QUESTIONS_PER_TEST + ' per test  ·  30 minutes  ·  25 to 120 seconds per question'
+      + QUESTIONS_PER_TEST + ' per test  ·  50 minutes  ·  42 to 200 seconds per question'
       + (isDebug() ? '  ·  DEBUG: 1 question' : '');
   }
 
@@ -327,7 +327,7 @@
     tick();
   }
 
-  // Time limit per question: the first round gets 120 s, falling evenly to 25 s for the last round.
+  // Time limit per question: the first round gets 200 s, falling evenly to 42 s for the last round.
   function limitFor(index, total) {
     const size = Math.max(1, Math.ceil(total / ROUNDS));
     const rungs = Math.ceil(total / size);
@@ -422,7 +422,7 @@
   // ---------- Presenter: typed lines in the hologram box ----------
   const PRESENTER = {
     intro: [
-      'Welcome to TASQ27. Fifty questions, thirty minutes, zero second chances. Let’s see what you’re made of.',
+      'Welcome to TASQ27. Fifty questions, fifty minutes, zero second chances. Let’s see what you’re made of.',
       'Good evening, contestants. The lights are on, the cameras are rolling, and the machines are watching.',
       'Three powers, one brain. Use them wisely, the audience has a long memory.'
     ],
@@ -739,7 +739,7 @@
     $('result-copy').textContent = win
       ? 'You answered ' + pct + '% correctly, above the ' + PASS_PERCENT + '% pass mark.'
       : reason === 'lives' ? 'You ran out of lives before finishing the test.'
-      : reason === 'time' ? 'The 30 minutes ran out before the test was finished.'
+      : reason === 'time' ? 'The 50 minutes ran out before the test was finished.'
       : 'You answered ' + pct + '% correctly. The pass mark is ' + PASS_PERCENT + '%.';
     $('final-score').textContent = pad6(state.score);
     $('stat-correct').textContent = state.correct + '/' + total;

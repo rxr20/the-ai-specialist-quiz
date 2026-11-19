@@ -71,7 +71,7 @@ The question bank follows the kind of material found in AI specialist certificat
 </div>
 
 - 📚 **1,320 practice questions**, 50 drawn at random for each test
-- ⏱️ **Progressive time limits** – from 120 s per question down to 25 s
+- ⏱️ **Progressive time limits** – from 200 s per question down to 42 s
 - ❤️ **5 lives** – a wrong or timed-out answer costs one
 - 🆘 **3 lifelines**, each usable once per test
 - 🎙️ **The TASQ Presenter** comments on your answers and milestones
@@ -125,7 +125,7 @@ Once it's open, press **Enter** (or tap) on the splash screen, then choose **PLA
 1. **Select** an answer by clicking it or pressing `A` `B` `C` `D` (or `1`–`4`).
 2. **Lock it in** with **FINAL ANSWER** or `Enter`. It turns green if right, red if wrong, and the correct answer is revealed.
 3. Move on with **NEXT QUESTION**, or wait for the short automatic pause.
-4. Survive all **50 questions** within the **30-minute** overall clock and keep **5 lives** to the end.
+4. Survive all **50 questions** within the **50-minute** overall clock and keep **5 lives** to the end.
 
 If a question's timer runs out, your selected answer is checked as normal. With nothing selected, it counts as wrong and costs a life.
 
@@ -135,11 +135,11 @@ Questions come in 10 rounds of five. The deeper you go, the less time you get.
 
 | Questions | Time each | Questions | Time each |
 |---|---|---|---|
-| Q01–05 | 120 s | Q26–30 | 67 s |
-| Q06–10 | 109 s | Q31–35 | 57 s |
-| Q11–15 | 99 s | Q36–40 | 46 s |
-| Q16–20 | 88 s | Q41–45 | 36 s |
-| Q21–25 | 78 s | Q46–50 | **25 s** |
+| Q01–05 | 200 s | Q26–30 | 112 s |
+| Q06–10 | 182 s | Q31–35 | 95 s |
+| Q11–15 | 165 s | Q36–40 | 77 s |
+| Q16–20 | 147 s | Q41–45 | 60 s |
+| Q21–25 | 130 s | Q46–50 | **42 s** |
 
 ### 🆘 Lifelines
 
